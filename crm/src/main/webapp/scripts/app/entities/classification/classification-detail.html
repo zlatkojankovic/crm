@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="crmApp.classification.detail.title">Classification</span> {{classification.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classification.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classification.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classification.classificationSegment">ClassificationSegment</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classification.classificationSegment}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classification.classification">classification</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classification.classification.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classification.classificationType">classificationType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classification.classificationType.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="classification"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

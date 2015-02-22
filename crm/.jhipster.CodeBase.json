@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "person",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Person",
+            "otherEntityField": "firstName"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "classification",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Classification",
+            "ownerSide": false
+        },
+        {
+            "relationshipId": 3,
+            "otherEntityName": "codeBase",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "CodeBase",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "dateEntry",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateEntry",
+            "fieldNameUnderscored": "date_entry"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dateValid",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateValid",
+            "fieldNameUnderscored": "date_valid"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150222140001"
+}
