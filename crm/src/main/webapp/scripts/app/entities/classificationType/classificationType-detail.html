@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="crmApp.classificationType.detail.title">ClassificationType</span> {{classificationType.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classificationType.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classificationType.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classificationType.mandatory">Mandatory</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classificationType.mandatory}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.classificationType.objectClassificationType">ObjectClassificationType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{classificationType.objectClassificationType}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="classificationType"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

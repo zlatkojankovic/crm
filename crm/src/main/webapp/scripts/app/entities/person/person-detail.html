@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="crmApp.person.detail.title">Person</span> {{person.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.firstName">FirstName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.firstName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.lastName">LastName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.lastName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.defaultAddress">DefaultAddress</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.defaultAddress}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.nationalNumber">NationalNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.nationalNumber}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.password">Password</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.password}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.username">Username</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.username}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.dateEntry">DateEntry</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.dateEntry}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.person.dateValid">DateValid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{person.dateValid}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="person"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

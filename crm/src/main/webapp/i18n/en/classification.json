@@ -1,0 +1,22 @@
+{
+    "crmApp": {
+        "classification" : {
+            "home": {
+                "title": "Classifications",
+                "createLabel": "Create a new Classification",
+                "createOrEditLabel": "Create or edit a Classification"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Classification {{ id }}?"
+            },
+            "detail": {
+                "title": "Classification"
+            },
+            "name": "Name",
+            "classificationSegment": "ClassificationSegment",
+            "classification": "classification",
+            "codeBase": "codeBase",
+            "classificationType": "classificationType"
+        }
+    }
+}
