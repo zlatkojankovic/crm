@@ -1,0 +1,21 @@
+{
+    "crmApp": {
+        "classificationType" : {
+            "home": {
+                "title": "ClassificationTypes",
+                "createLabel": "Create a new ClassificationType",
+                "createOrEditLabel": "Create or edit a ClassificationType"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete ClassificationType {{ id }}?"
+            },
+            "detail": {
+                "title": "ClassificationType"
+            },
+            "name": "Name",
+            "mandatory": "Mandatory",
+            "objectClassificationType": "ObjectClassificationType",
+            "classification": "classification"
+        }
+    }
+}

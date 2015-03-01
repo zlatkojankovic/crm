@@ -1,0 +1,19 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "territoryType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "TerritoryType",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150301204118"
+}

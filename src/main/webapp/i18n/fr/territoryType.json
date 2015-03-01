@@ -1,0 +1,22 @@
+{
+    "crmApp": {
+        "territoryType" : {
+            "home": {
+                "title": "TerritoryTypes",
+                "createLabel": "Créer un nouveau TerritoryType",
+                "createOrEditLabel": "Créer ou éditer un TerritoryType"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TerritoryType {{ id }} ?"
+            },
+            "detail": {
+                "title": "TerritoryType"
+            },
+            "name": "Name",
+            "description": "Description",
+            "dateEntry": "DateEntry",
+            "territory": "territory"
+        }
+    }
+}
+

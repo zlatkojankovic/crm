@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="crmApp.codeBase.detail.title">CodeBase</span> {{codeBase.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.codeBase.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codeBase.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.codeBase.dateEntry">DateEntry</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codeBase.dateEntry}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.codeBase.dateValid">DateValid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codeBase.dateValid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.codeBase.person">person</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codeBase.person.firstName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.codeBase.codeBase">codeBase</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codeBase.codeBase.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="codeBase"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

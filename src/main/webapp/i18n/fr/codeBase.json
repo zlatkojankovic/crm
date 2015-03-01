@@ -1,0 +1,24 @@
+{
+    "crmApp": {
+        "codeBase" : {
+            "home": {
+                "title": "CodeBases",
+                "createLabel": "Créer un nouveau CodeBase",
+                "createOrEditLabel": "Créer ou éditer un CodeBase"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le CodeBase {{ id }} ?"
+            },
+            "detail": {
+                "title": "CodeBase"
+            },
+            "name": "Name",
+            "dateEntry": "DateEntry",
+            "dateValid": "DateValid",
+            "person": "person",
+            "classification": "classification",
+            "codeBase": "codeBase"
+        }
+    }
+}
+

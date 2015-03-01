@@ -1,0 +1,40 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "territory",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Territory"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dateEntry",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateEntry",
+            "fieldNameUnderscored": "date_entry"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150301203108"
+}

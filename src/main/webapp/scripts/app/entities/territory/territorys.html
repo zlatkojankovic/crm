@@ -1,0 +1,139 @@
+<div>
+
+    <h2 translate="crmApp.territory.home.title">Territory</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveTerritoryModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.territory.home.createLabel">Create a new Territory</span>
+    </button>
+    <div class="modal fade" id="saveTerritoryModal" tabindex="-1" role="dialog" aria-labelledby="myTerritoryLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myTerritoryLabel"
+                            translate="crmApp.territory.home.createOrEditLabel">Create or edit a Territory</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="territory.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.territory.name">Name</label>
+                            <input type="text" class="form-control"
+                                   ng-model="territory.name">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.territory.dateEntry">DateEntry</label>
+                            <input type="datetime-local" class="form-control"
+                                   ng-model="territory.dateEntry" ng-model-options="{timezone: 'UTC'}">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.territory.dateValid">DateValid</label>
+                            <input type="datetime-local" class="form-control"
+                                   ng-model="territory.dateValid" ng-model-options="{timezone: 'UTC'}">
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.territory.person">person</label>
+                            <select class="form-control" ng-model="codeBase.person.id"
+                                    ng-options="person.id as person.firstName for person in persons">
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label translate="crmApp.territory.territoryType">territoryType</label>
+                            <select class="form-control" ng-model="territory.territoryType.id"
+                                    ng-options="territoryType.id as territoryType.name for territoryType in territoryTypes">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+                            translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteTerritoryConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(territory.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="crmApp.territory.delete.question" translate-values="{id: '{{territory.id}}'}">Are
+                            you sure you want to delete Territory {{territory.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+                            translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span
+                            translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th translate="crmApp.territory.territoryType">territoryType</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="territory in territorys">
+                <td><a ui-sref="territoryDetails({id:territory.id})">{{territory.id}}</a></td>
+                <td>{{territory.territoryType.name}}</td>
+                <td>
+                    <button type="submit"
+                            ui-sref="territoryDetail({id:territory.id})"
+                            class="btn btn-info">
+                        <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                    </button>
+                    <button type="submit"
+                            ng-click="update(territory.id)"
+                            class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span
+                        translate="entity.action.edit"> Edit</span>
+                    </button>
+                    <button type="submit"
+                            ng-click="delete(territory.id)"
+                            class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span
+                        translate="entity.action.delete"> Delete</span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
