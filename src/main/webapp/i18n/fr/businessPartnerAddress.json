@@ -1,0 +1,22 @@
+{
+    "crmApp": {
+        "businessPartnerAddress" : {
+            "home": {
+                "title": "BusinessPartnerAddresss",
+                "createLabel": "Créer un nouveau BusinessPartnerAddress",
+                "createOrEditLabel": "Créer ou éditer un BusinessPartnerAddress"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le BusinessPartnerAddress {{ id }} ?"
+            },
+            "detail": {
+                "title": "BusinessPartnerAddress"
+            },
+            "street": "Street",
+            "number": "Number",
+            "businessPartner": "businessPartner",
+            "territory": "territory"
+        }
+    }
+}
+

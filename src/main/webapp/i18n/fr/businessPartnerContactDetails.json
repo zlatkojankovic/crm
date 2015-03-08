@@ -1,0 +1,26 @@
+{
+    "crmApp": {
+        "businessPartnerContactDetails" : {
+            "home": {
+                "title": "BusinessPartnerContactDetailss",
+                "createLabel": "Créer un nouveau BusinessPartnerContactDetails",
+                "createOrEditLabel": "Créer ou éditer un BusinessPartnerContactDetails"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le BusinessPartnerContactDetails {{ id }} ?"
+            },
+            "detail": {
+                "title": "BusinessPartnerContactDetails"
+            },
+            "firstName": "FirstName",
+            "lastName": "LastName",
+            "email": "Email",
+            "address": "Address",
+            "dateFrom": "DateFrom",
+            "dateTo": "DateTo",
+            "businessPartner": "businessPartner",
+            "phneNumber": "phneNumber"
+        }
+    }
+}
+

@@ -1,0 +1,150 @@
+<div>
+
+    <h2 translate="crmApp.businessPartnerContactDetails.home.title">BusinessPartnerContactDetails</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveBusinessPartnerContactDetailsModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.businessPartnerContactDetails.home.createLabel">Create a new BusinessPartnerContactDetails</span>
+    </button>
+    <div class="modal fade" id="saveBusinessPartnerContactDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myBusinessPartnerContactDetailsLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myBusinessPartnerContactDetailsLabel" translate="crmApp.businessPartnerContactDetails.home.createOrEditLabel">Create or edit a BusinessPartnerContactDetails</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="businessPartnerContactDetails.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.firstName">FirstName</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartnerContactDetails.firstName">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.lastName">LastName</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartnerContactDetails.lastName">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.email">Email</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartnerContactDetails.email">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.address">Address</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartnerContactDetails.address">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.dateFrom">DateFrom</label>
+                            <input type="datetime-local" class="form-control"
+                                   ng-model="businessPartnerContactDetails.dateFrom" ng-model-options="{timezone: 'UTC'}">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.dateTo">DateTo</label>
+                            <input type="datetime-local" class="form-control"
+                                   ng-model="businessPartnerContactDetails.dateTo" ng-model-options="{timezone: 'UTC'}">
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartnerContactDetails.businessPartner">businessPartner</label>
+                            <select class="form-control" ng-model="businessPartnerContactDetails.businessPartner.id" ng-options="businessPartner.id as businessPartner.name for businessPartner in businessPartners">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteBusinessPartnerContactDetailsConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(businessPartnerContactDetails.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="crmApp.businessPartnerContactDetails.delete.question" translate-values="{id: '{{businessPartnerContactDetails.id}}'}">Are you sure you want to delete BusinessPartnerContactDetails {{businessPartnerContactDetails.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="crmApp.businessPartnerContactDetails.firstName">FirstName</th>
+                    <th translate="crmApp.businessPartnerContactDetails.lastName">LastName</th>
+                    <th translate="crmApp.businessPartnerContactDetails.email">Email</th>
+                    <th translate="crmApp.businessPartnerContactDetails.address">Address</th>
+                    <th translate="crmApp.businessPartnerContactDetails.dateFrom">DateFrom</th>
+                    <th translate="crmApp.businessPartnerContactDetails.dateTo">DateTo</th>
+                    <th translate="crmApp.businessPartnerContactDetails.businessPartner">businessPartner</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="businessPartnerContactDetails in businessPartnerContactDetailss">
+                    <td><a ui-sref="businessPartnerContactDetailsDetails({id:businessPartnerContactDetails.id})">{{businessPartnerContactDetails.id}}</a></td>
+                    <td>{{businessPartnerContactDetails.firstName}}</td>
+                    <td>{{businessPartnerContactDetails.lastName}}</td>
+                    <td>{{businessPartnerContactDetails.email}}</td>
+                    <td>{{businessPartnerContactDetails.address}}</td>
+                    <td>{{businessPartnerContactDetails.dateFrom}}</td>
+                    <td>{{businessPartnerContactDetails.dateTo}}</td>
+                    <td>{{businessPartnerContactDetails.businessPartner.name}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="businessPartnerContactDetailsDetail({id:businessPartnerContactDetails.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(businessPartnerContactDetails.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(businessPartnerContactDetails.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

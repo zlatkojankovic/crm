@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="crmApp.businessPartner.detail.title">BusinessPartner</span> {{businessPartner.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartner.email">Email</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartner.email}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartner.PIB">PIB</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartner.PIB}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartner.status">Status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartner.status}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartner.registrationNumber">RegistrationNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartner.registrationNumber}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="businessPartner"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

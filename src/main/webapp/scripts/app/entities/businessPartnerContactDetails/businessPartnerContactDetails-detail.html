@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="crmApp.businessPartnerContactDetails.detail.title">BusinessPartnerContactDetails</span> {{businessPartnerContactDetails.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.firstName">FirstName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.firstName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.lastName">LastName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.lastName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.email">Email</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.email}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.address">Address</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.address}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.dateFrom">DateFrom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.dateFrom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.dateTo">DateTo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.dateTo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerContactDetails.businessPartner">businessPartner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerContactDetails.businessPartner.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="businessPartnerContactDetails"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

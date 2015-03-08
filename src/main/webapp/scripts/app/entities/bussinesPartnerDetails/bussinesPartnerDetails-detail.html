@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="crmApp.bussinesPartnerDetails.detail.title">BussinesPartnerDetails</span> {{bussinesPartnerDetails.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.content">Content</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.content}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.dateFrom">DateFrom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.dateFrom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.dateTo">DateTo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.dateTo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.contentVersion">ContentVersion</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.contentVersion}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.n">N</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.n}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.businessPartnerDetailsType">businessPartnerDetailsType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.businessPartnerDetailsType.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bussinesPartnerDetails.businessPartner">businessPartner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bussinesPartnerDetails.businessPartner.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="bussinesPartnerDetails"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

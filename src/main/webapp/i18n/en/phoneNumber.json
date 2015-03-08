@@ -1,0 +1,20 @@
+{
+    "crmApp": {
+        "phoneNumber" : {
+            "home": {
+                "title": "PhoneNumbers",
+                "createLabel": "Create a new PhoneNumber",
+                "createOrEditLabel": "Create or edit a PhoneNumber"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete PhoneNumber {{ id }}?"
+            },
+            "detail": {
+                "title": "PhoneNumber"
+            },
+            "number": "Number",
+            "type": "Type",
+            "businessPartnerContactDetails": "businessPartnerContactDetails"
+        }
+    }
+}

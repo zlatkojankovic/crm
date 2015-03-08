@@ -1,0 +1,24 @@
+{
+    "crmApp": {
+        "bankAccount" : {
+            "home": {
+                "title": "BankAccounts",
+                "createLabel": "Créer un nouveau BankAccount",
+                "createOrEditLabel": "Créer ou éditer un BankAccount"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le BankAccount {{ id }} ?"
+            },
+            "detail": {
+                "title": "BankAccount"
+            },
+            "accountNumber": "AccountNumber",
+            "status": "Status",
+            "dateFrom": "DateFrom",
+            "dateTo": "DateTo",
+            "type": "Type",
+            "businesspartner": "businesspartner"
+        }
+    }
+}
+

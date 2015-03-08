@@ -1,0 +1,129 @@
+<div>
+
+    <h2 translate="crmApp.businessPartner.home.title">BusinessPartner</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveBusinessPartnerModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.businessPartner.home.createLabel">Create a new BusinessPartner</span>
+    </button>
+    <div class="modal fade" id="saveBusinessPartnerModal" tabindex="-1" role="dialog" aria-labelledby="myBusinessPartnerLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myBusinessPartnerLabel" translate="crmApp.businessPartner.home.createOrEditLabel">Create or edit a BusinessPartner</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="businessPartner.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartner.email">Email</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartner.email">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartner.PIB">PIB</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartner.PIB">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartner.status">Status</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartner.status">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.businessPartner.registrationNumber">RegistrationNumber</label>
+                            <input type="text" class="form-control"
+                                   ng-model="businessPartner.registrationNumber">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteBusinessPartnerConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(businessPartner.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="crmApp.businessPartner.delete.question" translate-values="{id: '{{businessPartner.id}}'}">Are you sure you want to delete BusinessPartner {{businessPartner.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="crmApp.businessPartner.email">Email</th>
+                    <th translate="crmApp.businessPartner.PIB">PIB</th>
+                    <th translate="crmApp.businessPartner.status">Status</th>
+                    <th translate="crmApp.businessPartner.registrationNumber">RegistrationNumber</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="businessPartner in businessPartners">
+                    <td><a ui-sref="businessPartnerDetails({id:businessPartner.id})">{{businessPartner.id}}</a></td>
+                    <td>{{businessPartner.email}}</td>
+                    <td>{{businessPartner.PIB}}</td>
+                    <td>{{businessPartner.status}}</td>
+                    <td>{{businessPartner.registrationNumber}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="businessPartnerDetail({id:businessPartner.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(businessPartner.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(businessPartner.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

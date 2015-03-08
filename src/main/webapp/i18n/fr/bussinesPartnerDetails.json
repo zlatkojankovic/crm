@@ -1,0 +1,26 @@
+{
+    "crmApp": {
+        "bussinesPartnerDetails" : {
+            "home": {
+                "title": "BussinesPartnerDetailss",
+                "createLabel": "Créer un nouveau BussinesPartnerDetails",
+                "createOrEditLabel": "Créer ou éditer un BussinesPartnerDetails"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le BussinesPartnerDetails {{ id }} ?"
+            },
+            "detail": {
+                "title": "BussinesPartnerDetails"
+            },
+            "content": "Content",
+            "dateFrom": "DateFrom",
+            "dateTo": "DateTo",
+            "description": "Description",
+            "contentVersion": "ContentVersion",
+            "n": "N",
+            "businessPartnerDetailsType": "businessPartnerDetailsType",
+            "businessPartner": "businessPartner"
+        }
+    }
+}
+

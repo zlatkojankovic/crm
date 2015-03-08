@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="crmApp.bankAccount.detail.title">BankAccount</span> {{bankAccount.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.accountNumber">AccountNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.accountNumber}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.status">Status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.status}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.dateFrom">DateFrom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.dateFrom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.dateTo">DateTo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.dateTo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.type">Type</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.type}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.bankAccount.businesspartner">businesspartner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{bankAccount.businesspartner.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="bankAccount"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

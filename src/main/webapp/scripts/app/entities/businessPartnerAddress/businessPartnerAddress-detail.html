@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="crmApp.businessPartnerAddress.detail.title">BusinessPartnerAddress</span> {{businessPartnerAddress.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerAddress.street">Street</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerAddress.street}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerAddress.number">Number</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerAddress.number}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerAddress.businessPartner">businessPartner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerAddress.businessPartner.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.businessPartnerAddress.territory">territory</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{businessPartnerAddress.territory.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="businessPartnerAddress"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

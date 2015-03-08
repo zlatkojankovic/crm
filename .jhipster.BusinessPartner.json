@@ -1,0 +1,65 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "businessPartnerDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "BusinessPartnerDetails"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "businessPartnerAddress",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "BusinessPartnerAddress"
+        },
+        {
+            "relationshipId": 3,
+            "otherEntityName": "businessPartnerContactDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "BusinessPartnerContactDetails"
+        },
+        {
+            "relationshipId": 4,
+            "otherEntityName": "bankAccounts",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "BankAccounts"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Email",
+            "fieldNameUnderscored": "email"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "PIB",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PIB",
+            "fieldNameUnderscored": "pib"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Status",
+            "fieldNameUnderscored": "status"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "registrationNumber",
+            "fieldType": "String",
+            "fieldNameCapitalized": "RegistrationNumber",
+            "fieldNameUnderscored": "registration_number"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150308194929"
+}

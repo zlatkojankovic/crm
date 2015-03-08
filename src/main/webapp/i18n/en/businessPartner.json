@@ -1,0 +1,25 @@
+{
+    "crmApp": {
+        "businessPartner" : {
+            "home": {
+                "title": "BusinessPartners",
+                "createLabel": "Create a new BusinessPartner",
+                "createOrEditLabel": "Create or edit a BusinessPartner"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete BusinessPartner {{ id }}?"
+            },
+            "detail": {
+                "title": "BusinessPartner"
+            },
+            "email": "Email",
+            "PIB": "PIB",
+            "status": "Status",
+            "registrationNumber": "RegistrationNumber",
+            "businessPartnerDetails": "businessPartnerDetails",
+            "businessPartnerAddress": "businessPartnerAddress",
+            "businessPartnerContactDetails": "businessPartnerContactDetails",
+            "bankAccounts": "bankAccounts"
+        }
+    }
+}

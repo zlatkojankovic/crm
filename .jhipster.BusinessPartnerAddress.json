@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "businessPartner",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "BusinessPartner",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "territory",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Territory",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "street",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Street",
+            "fieldNameUnderscored": "street"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "number",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Number",
+            "fieldNameUnderscored": "number"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150308201127"
+}

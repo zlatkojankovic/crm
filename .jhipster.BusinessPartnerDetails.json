@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "businessPartner",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "BusinessPartner",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "businessPartnerDetailsType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "BusinessPartnerDetailsType",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "content",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Content",
+            "fieldNameUnderscored": "content"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "dateFrom",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateFrom",
+            "fieldNameUnderscored": "date_from"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dateTo",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateTo",
+            "fieldNameUnderscored": "date_to"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "contentVersion",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ContentVersion",
+            "fieldNameUnderscored": "content_version"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150308193913"
+}

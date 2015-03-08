@@ -1,0 +1,21 @@
+{
+    "crmApp": {
+        "businessPartnerDetailsType" : {
+            "home": {
+                "title": "BusinessPartnerDetailsTypes",
+                "createLabel": "Create a new BusinessPartnerDetailsType",
+                "createOrEditLabel": "Create or edit a BusinessPartnerDetailsType"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete BusinessPartnerDetailsType {{ id }}?"
+            },
+            "detail": {
+                "title": "BusinessPartnerDetailsType"
+            },
+            "name": "Name",
+            "description": "Description",
+            "dateEntry": "DateEntry",
+            "businessPartnerDetails": "businessPartnerDetails"
+        }
+    }
+}
