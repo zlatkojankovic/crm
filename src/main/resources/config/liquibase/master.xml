@@ -11,6 +11,15 @@
     <include file="classpath:config/liquibase/changelog/20150222152810_added_entity_Classification.xml" relativeToChangelogFile="false"/
     <include file="classpath:config/liquibase/changelog/20150301203108_added_entity_TerritoryType.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150301203150_added_entity_Type.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20150301204118_added_entity_Territory.xml" relativeToChangelogFile="false"/>    -->
+    <include file="classpath:config/liquibase/changelog/20150301204118_added_entity_Territory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308181951_added_entity_BusinessPartnerDetailsType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308182250_added_entity_BusinessPartnerDetailsType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308185416_added_entity_BussinesPartnerDetails.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308193913_added_entity_BusinessPartnerDetails.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308194929_added_entity_BusinessPartner.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308201127_added_entity_BusinessPartnerAddress.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308213534_added_entity_BusinessPartnerContactDetails.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308213651_added_entity_PhoneNumber.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308214035_added_entity_BankAccount.xml" relativeToChangelogFile="false"/>  -->
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

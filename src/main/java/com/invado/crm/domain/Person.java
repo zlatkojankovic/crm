@@ -16,7 +16,7 @@ import java.io.Serializable;
  * A Person.
  */
 @Entity
-@Table(name = "T_PERSON")
+@Table(name = "CB_PERSON")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Person implements Serializable {
 

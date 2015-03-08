@@ -19,7 +19,7 @@ import java.util.Set;
  * A CodeBase.
  */
 @Entity
-@Table(name = "T_CODEBASE")
+@Table(name = "CB_CODEBASE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class CodeBase implements Serializable {
 

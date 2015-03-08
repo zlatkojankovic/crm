@@ -19,7 +19,7 @@ import java.util.Set;
  * A TerritoryType.
  */
 @Entity
-@Table(name = "T_TERRITORYTYPE")
+@Table(name = "CB_TERRITORYTYPE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class TerritoryType implements Serializable {
 

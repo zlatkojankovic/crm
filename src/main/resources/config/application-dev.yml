@@ -33,6 +33,7 @@ spring:
             hibernate.generate_statistics: false
             hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
             hibernate.hbm2ddl.auto: create-drop
+            hibernate.hbm2ddl.import_files: config/initial-data.sql
 
     mail:
         baseUrl: http://localhost:8081

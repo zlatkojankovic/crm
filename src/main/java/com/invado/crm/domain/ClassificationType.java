@@ -13,7 +13,7 @@ import java.util.Set;
  * A ClassificationType.
  */
 @Entity
-@Table(name = "T_CLASSIFICATIONTYPE")
+@Table(name = "CB_CLASSIFICATIONTYPE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class ClassificationType implements Serializable {
 

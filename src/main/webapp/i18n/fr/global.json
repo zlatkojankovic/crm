@@ -13,6 +13,14 @@
                 "territoryType": "TerritoryType",
                 "type": "Type",
                 "territory": "Territory",
+                "businessPartnerDetailsType": "BusinessPartnerDetailsType",
+                "bussinesPartnerDetails": "BussinesPartnerDetails",
+                "businessPartnerDetails": "BusinessPartnerDetails",
+                "businessPartner": "BusinessPartner",
+                "businessPartnerAddress": "BusinessPartnerAddress",
+                "businessPartnerContactDetails": "BusinessPartnerContactDetails",
+                "phoneNumber": "PhoneNumber",
+                "bankAccount": "BankAccount",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

@@ -13,7 +13,6 @@ import java.util.Set;
  * A Territory.
  */
 @Entity
-@Table(name = "T_TERRITORY")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Territory extends CodeBase implements Serializable  {
 
