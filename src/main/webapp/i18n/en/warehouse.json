@@ -1,0 +1,19 @@
+{
+    "crmApp": {
+        "warehouse" : {
+            "home": {
+                "title": "Warehouses",
+                "createLabel": "Create a new Warehouse",
+                "createOrEditLabel": "Create or edit a Warehouse"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Warehouse {{ id }}?"
+            },
+            "detail": {
+                "title": "Warehouse"
+            },
+            "territory": "territory",
+            "codeBase": "codeBase"
+        }
+    }
+}
