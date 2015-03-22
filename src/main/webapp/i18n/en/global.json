@@ -21,6 +21,7 @@
                 "businessPartnerContactDetails": "BusinessPartnerContactDetails",
                 "phoneNumber": "PhoneNumber",
                 "bankAccount": "BankAccount",
+                "warehouse": "Warehouse",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

@@ -1,0 +1,26 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "territory",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Territory",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "codeBase",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "CodeBase",
+            "ownerSide": true
+        }
+    ],
+    "fields": [],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150310194307"
+}
