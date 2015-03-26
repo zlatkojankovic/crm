@@ -19,7 +19,8 @@
             "businessPartnerDetails": "businessPartnerDetails",
             "businessPartnerAddress": "businessPartnerAddress",
             "businessPartnerContactDetails": "businessPartnerContactDetails",
-            "bankAccounts": "bankAccounts"
+            "bankAccounts": "bankAccounts",
+            "name":"Name"
         }
     }
 }

@@ -31,9 +31,9 @@
                                    ng-model="businessPartnerAddress.street">
                         </div>
                         <div class="form-group">
-                            <label translate="crmApp.businessPartnerAddress.number">Number</label>
+                            <label translate="crmApp.businessPartnerAddress.number">House Number</label>
                             <input type="number" class="form-control"
-                                   ng-model="businessPartnerAddress.number">
+                                   ng-model="businessPartnerAddress.houseNumber">
                         </div>
 
                         <div class="form-group">
@@ -92,7 +92,7 @@
                 <tr>
                     <th>ID</th>
                     <th translate="crmApp.businessPartnerAddress.street">Street</th>
-                    <th translate="crmApp.businessPartnerAddress.number">Number</th>
+                    <th translate="crmApp.businessPartnerAddress.houseNumber">HouseNumber</th>
                     <th translate="crmApp.businessPartnerAddress.territory">businessPartner</th>
                     <th translate="crmApp.businessPartnerAddress.territory">territory</th>
                     <th></th>
@@ -102,7 +102,7 @@
                 <tr ng-repeat="businessPartnerAddress in businessPartnerAddresss">
                     <td><a ui-sref="businessPartnerAddressDetails({id:businessPartnerAddress.id})">{{businessPartnerAddress.id}}</a></td>
                     <td>{{businessPartnerAddress.street}}</td>
-                    <td>{{businessPartnerAddress.number}}</td>
+                    <td>{{businessPartnerAddress.houseNumber}}</td>
                     <td>{{businessPartnerAddress.businessPartner.name}}</td>
                     <td>{{businessPartnerAddress.territory.name}}</td>
                     <td>

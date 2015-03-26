@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BusinessPartnerController', function ($scope, BusinessPartner, BusinessPartnerDetails, BusinessPartnerAddress, BusinessPartnerContactDetails, BankAccounts) {
+    .controller('BusinessPartnerController', function ($scope, BusinessPartner, BusinessPartnerDetails, BusinessPartnerAddress, BusinessPartnerContactDetails, BankAccount) {
         $scope.businessPartners = [];
         $scope.businessPartnerDetailss = BusinessPartnerDetails.query();
         $scope.businessPartnerAddresss = BusinessPartnerAddress.query();
         $scope.businessPartnerContactDetailss = BusinessPartnerContactDetails.query();
-        $scope.bankAccountss = BankAccounts.query();
+        $scope.bankAccountss = BankAccount.query();
         $scope.loadAll = function() {
             BusinessPartner.query(function(result) {
                $scope.businessPartners = result;
@@ -43,6 +43,6 @@ angular.module('crmApp')
         };
 
         $scope.clear = function () {
-            $scope.businessPartner = {email: null, PIB: null, status: null, registrationNumber: null, id: null};
+            $scope.businessPartner = {email: null, PIB: null, status: null, registrationNumber: null, id: null, name:null, dateEntry:null, person:null};
         };
     });

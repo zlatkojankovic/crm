@@ -24,8 +24,8 @@ public class BusinessPartnerAddress implements Serializable {
     @Column(name = "street")
     private String street;
 
-    @Column(name = "number")
-    private Integer number;
+    @Column(name = "houseNumber")
+    private Integer houseNumber;
 
     @ManyToOne
     private BusinessPartner businessPartner;
@@ -50,11 +50,11 @@ public class BusinessPartnerAddress implements Serializable {
     }
 
     public Integer getNumber() {
-        return number;
+        return houseNumber;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setNumber(Integer houseNumber) {
+        this.houseNumber = houseNumber;
     }
 
     public BusinessPartner getBusinessPartner() {
@@ -99,7 +99,7 @@ public class BusinessPartnerAddress implements Serializable {
         return "BusinessPartnerAddress{" +
                 "id=" + id +
                 ", street='" + street + "'" +
-                ", number='" + number + "'" +
+                ", number='" + houseNumber + "'" +
                 '}';
     }
 }

@@ -19,7 +19,7 @@ import java.util.Set;
  * A BusinessPartnerContactDetails.
  */
 @Entity
-@Table(name = "CB_BUSINESSPARTNERCONTACTDETAILS")
+@Table(name = "CB_BUSINESSPARCONTACTDETAILS")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class BusinessPartnerContactDetails implements Serializable {
 

@@ -21,13 +21,14 @@ public class PhoneNumber implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "number")
-    private String number;
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
 
     @Column(name = "type")
     private String type;
 
     @ManyToOne
+    @JoinColumn(name = "BP_CONTACT_DETAILS_ID", nullable = false)
     private BusinessPartnerContactDetails businessPartnerContactDetails;
 
     public Long getId() {
@@ -39,11 +40,11 @@ public class PhoneNumber implements Serializable {
     }
 
     public String getNumber() {
-        return number;
+        return phoneNumber;
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.phoneNumber = number;
     }
 
     public String getType() {
@@ -87,7 +88,7 @@ public class PhoneNumber implements Serializable {
     public String toString() {
         return "PhoneNumber{" +
                 "id=" + id +
-                ", number='" + number + "'" +
+                ", number='" + phoneNumber + "'" +
                 ", type='" + type + "'" +
                 '}';
     }

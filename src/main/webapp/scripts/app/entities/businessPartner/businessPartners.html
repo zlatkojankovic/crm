@@ -19,33 +19,46 @@
                         <h4 class="modal-title" id="myBusinessPartnerLabel" translate="crmApp.businessPartner.home.createOrEditLabel">Create or edit a BusinessPartner</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
+                    
+                    <table>
+                    
+                    <thead>
+                	<tr>
+                    <th>ID</th>
+                    <th translate="crmApp.businessPartner.email">Email</th>
+                    <th translate="crmApp.businessPartner.PIB">PIB</th>
+                    <th translate="crmApp.businessPartner.status">Status</th>
+                    <th translate="crmApp.businessPartner.registrationNumber">RegistrationNumber</th>
+                    
+                    <th translate="crmApp.businessPartner.name">Name</th>
+                    <th translate="crmApp.businessPartner.dateEntry">Date Entry</th>
+                    <th translate="crmApp.businessPartner.person">Person</th>
+                    
+                </tr>
+           	 </thead>
+           	 
+           	  <tbody>
+           	  	<tr>
+           	  		<td><input type="text" class="form-control" name="id"
                                    ng-model="businessPartner.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label translate="crmApp.businessPartner.email">Email</label>
-                            <input type="text" class="form-control"
-                                   ng-model="businessPartner.email">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.businessPartner.PIB">PIB</label>
-                            <input type="text" class="form-control"
-                                   ng-model="businessPartner.PIB">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.businessPartner.status">Status</label>
-                            <input type="text" class="form-control"
-                                   ng-model="businessPartner.status">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.businessPartner.registrationNumber">RegistrationNumber</label>
-                            <input type="text" class="form-control"
-                                   ng-model="businessPartner.registrationNumber">
-                        </div>
-
+                    </td>
+                    <td><input type="text" class="form-control"
+                                   ng-model="businessPartner.email"></td>
+                    <td><input type="text" class="form-control"
+                                   ng-model="businessPartner.PIB"></td>
+                    <td><input type="text" class="form-control"
+                                   ng-model="businessPartner.status"></td>
+                    <td><input type="text" class="form-control"
+                                   ng-model="businessPartner.registrationNumber"></td>
+                    <td><input type="text" class="form-control"
+                                   ng-model="businessPartner.name"></td>
+                    <td> <input type="datetime-local" class="form-control"
+                                   ng-model="businessPartner.dateEntry" ng-model-options="{timezone: 'UTC'}"></td>
+                    <td><select class="form-control" ng-model="businessPartner.person.id" ng-options="person.id as person.firstName for person in persons">
+                            </select></td>
+           	  	</tr>
+           	  </tbody>
+                  </table>  
 
                     </div>
                     <div class="modal-footer">

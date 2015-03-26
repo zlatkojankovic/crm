@@ -13,7 +13,7 @@
                 "title": "BusinessPartnerAddress"
             },
             "street": "Street",
-            "number": "Number",
+            "houseNumber": "HouseNumber",
             "businessPartner": "businessPartner",
             "territory": "territory"
         }

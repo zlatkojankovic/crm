@@ -42,7 +42,7 @@ public class CodeBase implements Serializable {
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @JsonSerialize(using = CustomDateTimeSerializer.class)
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
-    @Column(name = "date_valid", nullable = false)
+    @Column(name = "date_valid", nullable = true)
     private DateTime dateValid;
 
     @ManyToOne
