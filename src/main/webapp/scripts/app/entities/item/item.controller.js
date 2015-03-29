@@ -2,6 +2,7 @@
 
 angular.module('crmApp')
     .controller('ItemController', function ($scope, Item, UnitOfMeasure) {
+
         $scope.items = [];
         $scope.unitOfMeasures = UnitOfMeasure.query();
         $scope.loadAll = function() {
@@ -40,6 +41,7 @@ angular.module('crmApp')
         };
 
         $scope.clear = function () {
-            $scope.item = {description: null, id: null};
+
+            $scope.item = {name: null, description: null, id: null, dateEntry: new Date()};
         };
     });

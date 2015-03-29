@@ -10,7 +10,7 @@ import java.io.Serializable;
  * A UnitOfMeasure.
  */
 @Entity
-@Table(name = "T_UNITOFMEASURE")
+@Table(name = "CB_UNITOFMEASURE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class UnitOfMeasure implements Serializable {
 
