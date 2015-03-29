@@ -1,0 +1,23 @@
+{
+    "crmApp": {
+        "deviceOnPartnerLocation" : {
+            "home": {
+                "title": "DeviceOnPartnerLocations",
+                "createLabel": "Create a new DeviceOnPartnerLocation",
+                "createOrEditLabel": "Create or edit a DeviceOnPartnerLocation"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete DeviceOnPartnerLocation {{ id }}?"
+            },
+            "detail": {
+                "title": "DeviceOnPartnerLocation"
+            },
+            "dateFrom": "DateFrom",
+            "dateTo": "DateTo",
+            "status": "Status",
+            "comment": "Comment",
+            "device": "device",
+            "businesspartner": "businesspartner"
+        }
+    }
+}

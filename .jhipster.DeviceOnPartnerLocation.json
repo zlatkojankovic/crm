@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "device",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Device",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "businesspartner",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Businesspartner",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "dateFrom",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "DateFrom",
+            "fieldNameUnderscored": "date_from"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "dateTo",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateTo",
+            "fieldNameUnderscored": "date_to"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Status",
+            "fieldNameUnderscored": "status"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "comment",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Comment",
+            "fieldNameUnderscored": "comment"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150329150722"
+}

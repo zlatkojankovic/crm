@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="crmApp.device.detail.title">Device</span> {{device.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.customId">CustomId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.customId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.serialNumber">SerialNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.serialNumber}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.status">Status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.status}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.firmsareVersion">FirmsareVersion</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.firmsareVersion}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.dateEntry">DateEntry</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.dateEntry}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.dateValid">DateValid</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.dateValid}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.device.item">item</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{device.item.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="device"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

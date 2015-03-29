@@ -1,0 +1,115 @@
+<div>
+
+    <h2 translate="crmApp.unitOfMeasure.home.title">UnitOfMeasure</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveUnitOfMeasureModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.unitOfMeasure.home.createLabel">Create a new UnitOfMeasure</span>
+    </button>
+    <div class="modal fade" id="saveUnitOfMeasureModal" tabindex="-1" role="dialog" aria-labelledby="myUnitOfMeasureLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myUnitOfMeasureLabel" translate="crmApp.unitOfMeasure.home.createOrEditLabel">Create or edit a UnitOfMeasure</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="unitOfMeasure.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="crmApp.unitOfMeasure.name">Name</label>
+                            <input type="text" class="form-control"
+                                   ng-model="unitOfMeasure.name">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.unitOfMeasure.shortName">ShortName</label>
+                            <input type="text" class="form-control"
+                                   ng-model="unitOfMeasure.shortName">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteUnitOfMeasureConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(unitOfMeasure.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="crmApp.unitOfMeasure.delete.question" translate-values="{id: '{{unitOfMeasure.id}}'}">Are you sure you want to delete UnitOfMeasure {{unitOfMeasure.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="crmApp.unitOfMeasure.name">Name</th>
+                    <th translate="crmApp.unitOfMeasure.shortName">ShortName</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="unitOfMeasure in unitOfMeasures">
+                    <td><a ui-sref="unitOfMeasureDetails({id:unitOfMeasure.id})">{{unitOfMeasure.id}}</a></td>
+                    <td>{{unitOfMeasure.name}}</td>
+                    <td>{{unitOfMeasure.shortName}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="unitOfMeasureDetail({id:unitOfMeasure.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(unitOfMeasure.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(unitOfMeasure.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

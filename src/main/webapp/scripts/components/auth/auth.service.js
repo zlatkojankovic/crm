@@ -27,15 +27,17 @@ angular.module('crmApp')
             },
 
             logout: function () {
+                console.log("izvrsila se i ova i ona");
                 AuthServerProvider.logout();
                 Principal.authenticate(null);
             },
 
             authorize: function() {
+                console.log("izvrsila authorzizacija 1");
                 return Principal.identity()
                     .then(function() {
+                        console.log("izvrsila authorzizacija 1");
                         var isAuthenticated = Principal.isAuthenticated();
-
                         if ($rootScope.toState.data.roles && $rootScope.toState.data.roles.length > 0 && !Principal.isInAnyRole($rootScope.toState.data.roles)) {
                             if (isAuthenticated) {
                                 // user is signed in but not authorized for desired state

@@ -22,6 +22,10 @@
                 "phoneNumber": "PhoneNumber",
                 "bankAccount": "BankAccount",
                 "warehouse": "Warehouse",
+                "unitOfMeasure": "UnitOfMeasure",
+                "item": "Item",
+                "device": "Device",
+                "deviceOnPartnerLocation": "DeviceOnPartnerLocation",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

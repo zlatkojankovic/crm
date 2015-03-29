@@ -1,11 +1,11 @@
 <div>
 
-    <h2 translate="crmApp.person.home.title">Person</h2>
+    <h2 translate="crmApp.deviceOnPartnerLocation.home.title">DeviceOnPartnerLocation</h2>
 
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#savePersonModal" ng-click="clear()">
-        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.person.home.createLabel">Create a new Person</span>
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveDeviceOnPartnerLocationModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="crmApp.deviceOnPartnerLocation.home.createLabel">Create a new DeviceOnPartnerLocation</span>
     </button>
-    <div class="modal fade" id="savePersonModal" tabindex="-1" role="dialog" aria-labelledby="myPersonLabel"
+    <div class="modal fade" id="saveDeviceOnPartnerLocationModal" tabindex="-1" role="dialog" aria-labelledby="myDeviceOnPartnerLocationLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -16,56 +16,46 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myPersonLabel" translate="crmApp.person.home.createOrEditLabel">Create or edit a Person</h4>
+                        <h4 class="modal-title" id="myDeviceOnPartnerLocationLabel" translate="crmApp.deviceOnPartnerLocation.home.createOrEditLabel">Create or edit a DeviceOnPartnerLocation</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <label>ID</label>
                             <input type="text" class="form-control" name="id"
-                                   ng-model="person.id" readonly>
+                                   ng-model="deviceOnPartnerLocation.id" readonly>
                         </div>
 
                         <div class="form-group">
-                            <label translate="crmApp.person.firstName">FirstName</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.firstName">
+                            <label translate="crmApp.deviceOnPartnerLocation.dateFrom">DateFrom</label>
+                            <input type="date" class="form-control"
+                                   ng-model="deviceOnPartnerLocation.dateFrom">
                         </div>
                         <div class="form-group">
-                            <label translate="crmApp.person.lastName">LastName</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.lastName">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.person.defaultAddress">DefaultAddress</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.defaultAddress">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.person.nationalNumber">NationalNumber</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.nationalNumber">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.person.password">Password</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.password">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.person.username">Username</label>
-                            <input type="text" class="form-control"
-                                   ng-model="person.username">
-                        </div>
-                        <div class="form-group">
-                            <label translate="crmApp.person.dateEntry">DateEntry</label>
+                            <label translate="crmApp.deviceOnPartnerLocation.dateTo">DateTo</label>
                             <input type="datetime-local" class="form-control"
-                                   ng-model="person.dateEntry" ng-model-options="{timezone: 'UTC'}">
+                                   ng-model="deviceOnPartnerLocation.dateTo" ng-model-options="{timezone: 'UTC'}">
                         </div>
                         <div class="form-group">
-                            <label translate="crmApp.person.dateValid">DateValid</label>
-                            <input type="datetime-local" class="form-control"
-                                   ng-model="person.dateValid" ng-model-options="{timezone: 'UTC'}">
+                            <label translate="crmApp.deviceOnPartnerLocation.status">Status</label>
+                            <input type="text" class="form-control"
+                                   ng-model="deviceOnPartnerLocation.status">
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.deviceOnPartnerLocation.comment">Comment</label>
+                            <input type="text" class="form-control"
+                                   ng-model="deviceOnPartnerLocation.comment">
                         </div>
 
+                        <div class="form-group">
+                            <label translate="crmApp.deviceOnPartnerLocation.device">device</label>
+                            <select class="form-control" ng-model="deviceOnPartnerLocation.device.id" ng-options="device.id as device.name for device in devices">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="crmApp.deviceOnPartnerLocation.businesspartner">businesspartner</label>
+                            <select class="form-control" ng-model="deviceOnPartnerLocation.businesspartner.id" ng-options="businesspartner.id as businesspartner.name for businesspartner in businesspartners">
+                            </select>
+                        </div>
 
                     </div>
                     <div class="modal-footer">
@@ -81,17 +71,17 @@
         </div>
     </div>
 
-    <div class="modal fade" id="deletePersonConfirmation">
+    <div class="modal fade" id="deleteDeviceOnPartnerLocationConfirmation">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form name="form" ng-submit="confirmDelete(person.id)">
+                <form name="form" ng-submit="confirmDelete(deviceOnPartnerLocation.id)">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
                         <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
                     </div>
                     <div class="modal-body">
-                        <p translate="crmApp.person.delete.question" translate-values="{id: '{{person.id}}'}">Are you sure you want to delete Person {{person.id}}?</p>
+                        <p translate="crmApp.deviceOnPartnerLocation.delete.question" translate-values="{id: '{{deviceOnPartnerLocation.id}}'}">Are you sure you want to delete DeviceOnPartnerLocation {{deviceOnPartnerLocation.id}}?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
@@ -106,46 +96,42 @@
         </div>
     </div>
 
-    <div id="mojId" class="table-responsive">
+    <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th translate="crmApp.person.firstName">FirstName</th>
-                    <th translate="crmApp.person.lastName">LastName</th>
-                    <th translate="crmApp.person.defaultAddress">DefaultAddress</th>
-                    <th translate="crmApp.person.nationalNumber">NationalNumber</th>
-                    <th translate="crmApp.person.password">Password</th>
-                    <th translate="crmApp.person.username">Username</th>
-                    <th translate="crmApp.person.dateEntry">DateEntry</th>
-                    <th translate="crmApp.person.dateValid">DateValid</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.dateFrom">DateFrom</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.dateTo">DateTo</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.status">Status</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.comment">Comment</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.businesspartner">device</th>
+                    <th translate="crmApp.deviceOnPartnerLocation.businesspartner">businesspartner</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="person in persons">
-                    <td><a ui-sref="personDetail({id:person.id})">{{person.id}}</a></td>
-                    <td>{{person.firstName}}</td>
-                    <td>{{person.lastName}}</td>
-                    <td>{{person.defaultAddress}}</td>
-                    <td>{{person.nationalNumber}}</td>
-                    <td>{{person.password}}</td>
-                    <td>{{person.username}}</td>
-                    <td>{{person.dateEntry}}</td>
-                    <td>{{person.dateValid}}</td>
+                <tr ng-repeat="deviceOnPartnerLocation in deviceOnPartnerLocations">
+                    <td><a ui-sref="deviceOnPartnerLocationDetails({id:deviceOnPartnerLocation.id})">{{deviceOnPartnerLocation.id}}</a></td>
+                    <td>{{deviceOnPartnerLocation.dateFrom}}</td>
+                    <td>{{deviceOnPartnerLocation.dateTo}}</td>
+                    <td>{{deviceOnPartnerLocation.status}}</td>
+                    <td>{{deviceOnPartnerLocation.comment}}</td>
+                    <td>{{deviceOnPartnerLocation.device.name}}</td>
+                    <td>{{deviceOnPartnerLocation.businesspartner.name}}</td>
                     <td>
                         <button type="submit"
-                                ui-sref="personDetail({id:person.id})"
+                                ui-sref="deviceOnPartnerLocationDetail({id:deviceOnPartnerLocation.id})"
                                 class="btn btn-info">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
                         </button>
                         <button type="submit"
-                                ng-click="update(person.id)"
+                                ng-click="update(deviceOnPartnerLocation.id)"
                                 class="btn btn-primary">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
                         </button>
                         <button type="submit"
-                                ng-click="delete(person.id)"
+                                ng-click="delete(deviceOnPartnerLocation.id)"
                                 class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>

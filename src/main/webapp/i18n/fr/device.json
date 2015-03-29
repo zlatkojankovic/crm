@@ -1,0 +1,26 @@
+{
+    "crmApp": {
+        "device" : {
+            "home": {
+                "title": "Devices",
+                "createLabel": "Créer un nouveau Device",
+                "createOrEditLabel": "Créer ou éditer un Device"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Device {{ id }} ?"
+            },
+            "detail": {
+                "title": "Device"
+            },
+            "customId": "CustomId",
+            "serialNumber": "SerialNumber",
+            "status": "Status",
+            "firmsareVersion": "FirmsareVersion",
+            "dateEntry": "DateEntry",
+            "dateValid": "DateValid",
+            "item": "item",
+            "deviceOnPartnerLocation": "deviceOnPartnerLocation"
+        }
+    }
+}
+

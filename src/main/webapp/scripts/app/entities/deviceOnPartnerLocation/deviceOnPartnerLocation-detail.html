@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="crmApp.deviceOnPartnerLocation.detail.title">DeviceOnPartnerLocation</span> {{deviceOnPartnerLocation.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.dateFrom">DateFrom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.dateFrom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.dateTo">DateTo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.dateTo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.status">Status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.status}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.comment">Comment</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.comment}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.device">device</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.device.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="crmApp.deviceOnPartnerLocation.businesspartner">businesspartner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{deviceOnPartnerLocation.businesspartner.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="deviceOnPartnerLocation"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

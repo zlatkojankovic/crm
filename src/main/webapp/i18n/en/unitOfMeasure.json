@@ -1,0 +1,19 @@
+{
+    "crmApp": {
+        "unitOfMeasure" : {
+            "home": {
+                "title": "UnitOfMeasures",
+                "createLabel": "Create a new UnitOfMeasure",
+                "createOrEditLabel": "Create or edit a UnitOfMeasure"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete UnitOfMeasure {{ id }}?"
+            },
+            "detail": {
+                "title": "UnitOfMeasure"
+            },
+            "name": "Name",
+            "shortName": "ShortName"
+        }
+    }
+}

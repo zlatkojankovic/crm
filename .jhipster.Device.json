@@ -1,0 +1,68 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "otherEntityName": "item",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Item",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "otherEntityName": "deviceOnPartnerLocation",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "DeviceOnPartnerLocation"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "customId",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CustomId",
+            "fieldNameUnderscored": "custom_id"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "serialNumber",
+            "fieldType": "String",
+            "fieldNameCapitalized": "SerialNumber",
+            "fieldNameUnderscored": "serial_number"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Status",
+            "fieldNameUnderscored": "status"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "firmsareVersion",
+            "fieldType": "String",
+            "fieldNameCapitalized": "FirmsareVersion",
+            "fieldNameUnderscored": "firmsare_version"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "dateEntry",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateEntry",
+            "fieldNameUnderscored": "date_entry"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "dateValid",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateValid",
+            "fieldNameUnderscored": "date_valid"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150329150530"
+}
