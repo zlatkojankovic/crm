@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BusinessPartnerContactDetailsDetailController', function ($scope, $stateParams, BusinessPartnerContactDetails, BusinessPartner, PhneNumber) {
+    .controller('BusinessPartnerContactDetailsDetailController', function ($scope, $stateParams, BusinessPartnerContactDetails, BusinessPartner, PhoneNumber) {
         $scope.businessPartnerContactDetails = {};
         $scope.load = function (id) {
             BusinessPartnerContactDetails.get({id: id}, function(result) {

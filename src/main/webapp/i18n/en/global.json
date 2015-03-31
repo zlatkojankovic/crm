@@ -14,7 +14,6 @@
                 "type": "Type",
                 "territory": "Territory",
                 "businessPartnerDetailsType": "BusinessPartnerDetailsType",
-                "bussinesPartnerDetails": "BussinesPartnerDetails",
                 "businessPartnerDetails": "BusinessPartnerDetails",
                 "businessPartner": "BusinessPartner",
                 "businessPartnerAddress": "BusinessPartnerAddress",

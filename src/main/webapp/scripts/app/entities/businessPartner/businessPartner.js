@@ -13,14 +13,13 @@ angular.module('crmApp')
                     'content@': {
                         templateUrl: 'scripts/app/entities/businessPartner/businessPartners.html',
                         controller: 'BusinessPartnerController'
+                    },
+                    'contactDetailsInsert@businessPartner':{
+                        templateUrl: 'scripts/app/entities/businessPartnerContactDetails/businessPartnerContactDetailsModal.html'
+
                     }
-                },
-                resolve: {
-                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                        $translatePartialLoader.addPart('businessPartner');
-                        return $translate.refresh();
-                    }]
                 }
+
             })
             .state('businessPartnerDetail', {
                 parent: 'entity',
@@ -32,6 +31,25 @@ angular.module('crmApp')
                     'content@': {
                         templateUrl: 'scripts/app/entities/businessPartner/businessPartner-detail.html',
                         controller: 'BusinessPartnerDetailController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('businessPartner');
+                        return $translate.refresh();
+                    }]
+                }
+            })
+            .state('contacts', {
+                parent: 'businessPartner',
+
+                data: {
+                    roles: ['ROLE_USER']
+                },
+                views: {
+                    'contactDetails': {
+                        templateUrl: 'scripts/app/entities/businessPartnerContactDetails/businessPartnerContactDetailss.html',
+                        controller: 'BusinessPartnerContactDetailsController'
                     }
                 },
                 resolve: {

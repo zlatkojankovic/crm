@@ -5,6 +5,14 @@ angular.module('crmApp')
         $stateProvider
             .state('entity', {
                 abstract: true,
-                parent: 'site'
+                parent: 'site',
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('businessPartner');
+                        $translatePartialLoader.addPart('codeBase');
+                        $translatePartialLoader.addPart('businessPartnerContactDetails');
+                        return $translate.refresh();
+                    }]
+                }
             });
     });
