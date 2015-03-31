@@ -19,7 +19,7 @@ import java.util.Set;
  * A Device.
  */
 @Entity
-@Table(name = "T_DEVICE")
+@Table(name = "CB_DEVICE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Device implements Serializable {
 

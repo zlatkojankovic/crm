@@ -13,35 +13,13 @@ import java.util.Set;
  * A Item.
  */
 @Entity
-@Table(name = "T_ITEM")
+@Table(name = "CB_ITEM")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class Item implements Serializable {
+public class Item  extends CodeBase implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
-    @Column(name = "description")
-    private String description;
 
     @ManyToOne
     private UnitOfMeasure unitOfMeasure;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public UnitOfMeasure getUnitOfMeasure() {
         return unitOfMeasure;
@@ -62,21 +40,21 @@ public class Item implements Serializable {
 
         Item item = (Item) o;
 
-        if (id != null ? !id.equals(item.id) : item.id != null) return false;
+        if (getId() != null ? !getId().equals(item.getId()) : item.getId() != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return (int) (id ^ (id >>> 32));
+        return (int) (getId() ^ (getId() >>> 32));
     }
 
     @Override
     public String toString() {
         return "Item{" +
-                "id=" + id +
-                ", description='" + description + "'" +
+                "id=" + getId() +
+                ", description='" + getDescription() + "'" +
                 '}';
     }
 }

@@ -22,7 +22,7 @@ import java.util.Set;
  * A DeviceOnPartnerLocation.
  */
 @Entity
-@Table(name = "T_DEVICEONPARTNERLOCATION")
+@Table(name = "CB_DEVICEONPARTNERLOCATION")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class DeviceOnPartnerLocation implements Serializable {
 
