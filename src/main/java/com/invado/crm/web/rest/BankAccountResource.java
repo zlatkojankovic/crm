@@ -66,6 +66,21 @@ public class BankAccountResource {
         return new ResponseEntity<>(bankAccount, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/bankAccountsPerPartner/{partnerId}",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<BankAccount>> getAllPerPartner(@PathVariable Long partnerId, HttpServletResponse response) {
+        log.debug("REST request to get all Bank Accounts per Partner: {}", partnerId);
+        List<BankAccount> bankAccounts = bankAccountRepository.findAllPerPartnerId(partnerId);
+        log.debug("prosao je q  :", bankAccounts.size());
+        if (bankAccounts == null) {
+            log.debug("ali iapk je   :", 0);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        log.debug("ili moyda nije ", 0);
+        return new ResponseEntity<>(bankAccounts, HttpStatus.OK);
+    }
     /**
      * DELETE  /bankAccounts/:id -> delete the "id" bankAccount.
      */

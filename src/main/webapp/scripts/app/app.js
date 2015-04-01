@@ -56,8 +56,8 @@ angular.module('crmApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                         return Auth.authorize();
                     }],
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('global');
-                    $translatePartialLoader.addPart('language');
+                        $translatePartialLoader.addPart('global');
+                        $translatePartialLoader.addPart('language');
                     return $translate.refresh();
                 }]
             }

@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BankAccountController', function ($scope, BankAccount, Businesspartner) {
+    .controller('BankAccountController', function ($scope, BankAccount, BusinessPartner) {
         $scope.bankAccounts = [];
-        $scope.businesspartners = Businesspartner.query();
+        $scope.businessPartners = BusinessPartner.query();
         $scope.loadAll = function() {
             BankAccount.query(function(result) {
                $scope.bankAccounts = result;

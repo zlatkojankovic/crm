@@ -14,4 +14,10 @@ angular.module('crmApp')
                 }
             }
         });
+    })
+    .factory('BankAccountPerPartner', function ($resource) {
+        return $resource('api/bankAccountsPerPartner/:partnerId', {}, {
+             'get': {
+                method: 'GET', isArray: true}
+        });
     });

@@ -20,12 +20,12 @@
     <include file="classpath:config/liquibase/changelog/20150308201127_added_entity_BusinessPartnerAddress.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150308213534_added_entity_BusinessPartnerContactDetails.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150308213651_added_entity_PhoneNumber.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20150308214035_added_entity_BankAccount.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150308214035_added_entity_BankAccount.xml" relativeToChangelogFile="false"/> 
     <include file="classpath:config/liquibase/changelog/20150310194307_added_entity_Warehouse.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150329142221_added_entity_UnitOfMeasure.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150329142735_added_entity_Item.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150329142832_added_entity_Item.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150329150530_added_entity_Device.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20150329150722_added_entity_DeviceOnPartnerLocation.xml" relativeToChangelogFile="false"/>-->
+    <include file="classpath:config/liquibase/changelog/20150329150722_added_entity_DeviceOnPartnerLocation.xml" relativeToChangelogFile="false"/> -->
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>
