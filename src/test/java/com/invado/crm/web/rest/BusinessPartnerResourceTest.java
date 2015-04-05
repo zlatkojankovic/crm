@@ -16,6 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 
 import com.invado.crm.Application;
@@ -175,4 +178,6 @@ public class BusinessPartnerResourceTest {
         List<BusinessPartner> businessPartners = businessPartnerRepository.findAll();
         assertThat(businessPartners).hasSize(0);
     }
+
+
 }

@@ -42,7 +42,7 @@ public class BankAccount implements Serializable {
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @JsonSerialize(using = CustomDateTimeSerializer.class)
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
-    @Column(name = "date_to", nullable = false)
+    @Column(name = "date_to", nullable = true)
     private DateTime dateTo;
 
     @Column(name = "type")
@@ -99,12 +99,12 @@ public class BankAccount implements Serializable {
         this.type = type;
     }
 
-    public BusinessPartner getBusinesspartner() {
+    public BusinessPartner getBusinessPartner() {
         return businessPartner;
     }
 
-    public void setBusinesspartner(BusinessPartner businesspartner) {
-        this.businessPartner = businesspartner;
+    public void setBusinessPartner(BusinessPartner businessPartner) {
+        this.businessPartner = businessPartner;
     }
 
     @Override

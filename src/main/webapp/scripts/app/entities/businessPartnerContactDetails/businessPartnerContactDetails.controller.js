@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BusinessPartnerContactDetailsController', function ($scope, BusinessPartnerContactDetails, BusinessPartner, PhneNumber) {
+    .controller('BusinessPartnerContactDetailsController', function ($scope, BusinessPartnerContactDetails, BusinessPartner, PhoneNumber) {
         $scope.businessPartnerContactDetailss = [];
         $scope.businessPartners = BusinessPartner.query();
-        $scope.phneNumbers = PhneNumber.query();
+        $scope.phneNumbers = PhoneNumber.query();
         $scope.loadAll = function() {
             BusinessPartnerContactDetails.query(function(result) {
                $scope.businessPartnerContactDetailss = result;

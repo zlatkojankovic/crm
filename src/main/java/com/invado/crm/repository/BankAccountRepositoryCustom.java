@@ -1,6 +1,8 @@
 package com.invado.crm.repository;
 
 import com.invado.crm.domain.BankAccount;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -9,5 +11,6 @@ import java.util.List;
  */
 public interface BankAccountRepositoryCustom {
 
-    public List<BankAccount> findAllPerPartnerId(Long partnerId);
+    @Query("SELECT ba from BankAccount ba where ba.businessPartner.id = :partnerId")
+    public List<BankAccount> findAllPerPartnerId(@Param("partnerId") Long partnerId);
 }

@@ -3,7 +3,7 @@
 angular.module('crmApp')
     .factory('BankAccount', function ($resource) {
         return $resource('api/bankAccounts/:id', {}, {
-            'query': { method: 'GET', isArray: true},
+            'query': {method: 'GET', isArray: true},
             'get': {
                 method: 'GET',
                 transformResponse: function (data) {
@@ -17,7 +17,9 @@ angular.module('crmApp')
     })
     .factory('BankAccountPerPartner', function ($resource) {
         return $resource('api/bankAccountsPerPartner/:partnerId', {}, {
-             'get': {
-                method: 'GET', isArray: true}
-        });
+            'query': {
+                method: 'GET',
+                isArray: true
+                }
+            });
     });

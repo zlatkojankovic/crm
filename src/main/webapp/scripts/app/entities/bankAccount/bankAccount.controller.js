@@ -14,6 +14,7 @@ angular.module('crmApp')
         $scope.create = function () {
             BankAccount.save($scope.bankAccount,
                 function () {
+                    console.log("Partner " + $scope.bankAccount.businessPartner.id);
                     $scope.loadAll();
                     $('#saveBankAccountModal').modal('hide');
                     $scope.clear();

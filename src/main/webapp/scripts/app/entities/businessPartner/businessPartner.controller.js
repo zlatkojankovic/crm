@@ -13,9 +13,13 @@ angular.module('crmApp')
         $scope.loadAll = function () {
             BusinessPartner.query(function (result) {
                 $scope.businessPartners = result;
-                $scope.BankAccountsPerPartner = BankAccountPerPartner.get({partnerId: $scope.businessPartners[0].id});
-                console.log("ima ovo podatke "+$scope.BankAccountsPerPartner);
+                console.log("Prosledujemo "+ $scope.businessPartners[0].id);
+                //$scope.BankAccountsPerPartner = BankAccountPerPartner.get({partnerId: $scope.businessPartners[0].id});
 
+                BankAccountPerPartner.query({partnerId: $scope.businessPartners[0].id}, function(result){
+                     $scope.BankAccountsPerPartner = result;
+                     console.log("ima ovo podatke "+$scope.BankAccountsPerPartner.length);
+                });
             });
             BankAccount.query(function (result) {
                 $scope.bankAccountss = result;

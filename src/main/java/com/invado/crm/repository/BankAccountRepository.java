@@ -10,9 +10,7 @@ import java.util.List;
 /**
  * Spring Data JPA repository for the BankAccount entity.
  */
-public interface BankAccountRepository extends JpaRepository<BankAccount,Long>{
+public interface BankAccountRepository extends JpaRepository<BankAccount,Long>, BankAccountRepositoryCustom {
 
-    @Query("SELECT ba from BankAccount ba where ba.businessPartner in (select p from BusinessPartner p where p.id = :partnerId)")
-    public List<BankAccount> findAllPerPartnerId(@Param("partnerId") Long partnerId);
 
 }
