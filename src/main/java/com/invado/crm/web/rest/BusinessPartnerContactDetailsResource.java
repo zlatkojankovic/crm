@@ -67,6 +67,20 @@ public class BusinessPartnerContactDetailsResource {
     }
 
     /**
+     * GET  /businessPartnersContactDetailssPerPartner/:partnerId -> get the "partnerId" businessPartnerContactDetails.
+     */
+    @RequestMapping(value = "/businessPartnersContactDetailssPerPartner",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<BusinessPartnerContactDetails> getContactsPerBusinessPartner(@PathVariable Long partnerId, HttpServletResponse response) {
+        System.out.println("ovo je izgleda ipal proonadjeno");
+        log.debug("REST request to get BusinessPartnerContactDetailsPerPartner : {}", partnerId);
+        List<BusinessPartnerContactDetails> businessPartnerContactDetails = businessPartnerContactDetailsRepository.findAllPerPartnerId(partnerId);
+        return businessPartnerContactDetails;
+    }
+
+    /**
      * DELETE  /businessPartnerContactDetailss/:id -> delete the "id" businessPartnerContactDetails.
      */
     @RequestMapping(value = "/businessPartnerContactDetailss/{id}",

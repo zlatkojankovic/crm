@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BusinessPartnerContactDetailsController', function ($scope, BusinessPartnerContactDetails, BusinessPartner, PhoneNumber) {
+    .controller('BusinessPartnerContactDetailsController', function ($scope, $state, BusinessPartnerContactDetails, BusinessPartner, PhoneNumber) {
         $scope.businessPartnerContactDetailss = [];
         $scope.businessPartners = BusinessPartner.query();
         $scope.phneNumbers = PhoneNumber.query();
-        $scope.loadAll = function() {
-            BusinessPartnerContactDetails.query(function(result) {
-               $scope.businessPartnerContactDetailss = result;
+        $scope.loadAll = function () {
+            BusinessPartnerContactDetails.query(function (result) {
+                $scope.businessPartnerContactDetailss = result;
             });
         };
         $scope.loadAll();
@@ -41,6 +41,21 @@ angular.module('crmApp')
         };
 
         $scope.clear = function () {
-            $scope.businessPartnerContactDetails = {firstName: null, lastName: null, email: null, address: null, dateFrom: null, dateTo: null, id: null};
+            $scope.businessPartnerContactDetails = {
+                firstName: null,
+                lastName: null,
+                email: null,
+                address: null,
+                dateFrom: null,
+                dateTo: null,
+                id: null
+            };
         };
+
+        $scope.$on('TRANSFER_BPARTNER_ID', function (event, data) {
+            console.log("broadcasting data " + data); // 'Some data'
+            $state.go('businessPartnerContactDetailsDetailPerPartner', {partnerId: data});
+            console.log("okida mi on on broadcasting ali neki je drugi promblme");
+
+        });
     });

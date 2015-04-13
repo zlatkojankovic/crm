@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('crmApp')
-    .controller('BusinessPartnerController', function ($scope, BusinessPartner, BusinessPartnerDetails, BusinessPartnerAddress,
+    .controller('BusinessPartnerController', function ($scope, BusinessPartner, BusinessPartnerDataTransfer, BusinessPartnerDetails, BusinessPartnerAddress,
                                                        BusinessPartnerContactDetails, BankAccount, BankAccountPerPartner) {
         $scope.businessPartners = [];
         $scope.businessPartnerDetailss = BusinessPartnerDetails.query();
@@ -73,4 +73,8 @@ angular.module('crmApp')
                 person: null
             };
         };
+
+        $scope.transferId = function(partnerId){
+            BusinessPartnerDataTransfer.setPartnerID(partnerId);
+        }
     });

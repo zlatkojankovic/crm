@@ -148,6 +148,25 @@ public class BusinessPartnerContactDetailsResourceTest {
             .andExpect(jsonPath("$.dateTo").value(DEFAULT_DATE_TO_STR));
     }
 
+
+    @Test
+    @Transactional
+    public void getBusinessPartnerContactDetailsPerPartner() throws Exception {
+        // Initialize the database
+        businessPartnerContactDetailsRepository.saveAndFlush(businessPartnerContactDetails);
+
+        // Get the businessPartnerContactDetails
+        restBusinessPartnerContactDetailsMockMvc.perform(get("/api/businessPartnersContactDetailssPerPartner/{partnerId}", 7))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(jsonPath("$.[0].id").value(businessPartnerContactDetails.getId().intValue()))
+            .andExpect(jsonPath("$.[0].firstName").value(DEFAULT_FIRST_NAME.toString()))
+            .andExpect(jsonPath("$.[0].lastName").value(DEFAULT_LAST_NAME.toString()))
+            .andExpect(jsonPath("$.[0].email").value(DEFAULT_EMAIL.toString()))
+            .andExpect(jsonPath("$.[0].address").value(DEFAULT_ADDRESS.toString()))
+            .andExpect(jsonPath("$.[0].dateFrom").value(DEFAULT_DATE_FROM_STR))
+            .andExpect(jsonPath("$.[0].dateTo").value(DEFAULT_DATE_TO_STR));
+    }
     @Test
     @Transactional
     public void getNonExistingBusinessPartnerContactDetails() throws Exception {

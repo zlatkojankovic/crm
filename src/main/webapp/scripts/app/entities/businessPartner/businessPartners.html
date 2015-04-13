@@ -114,10 +114,11 @@
     </div>
 
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table id="tabelaDetalja" class="table table-hover table-striped" data-toggle="table">
             <thead>
             <tr>
                 <th>ID</th>
+                <th translate="crmapp.businessPartner.name">Name</th>
                 <th translate="crmApp.businessPartner.email">Email</th>
                 <th translate="crmApp.businessPartner.PIB">PIB</th>
                 <th translate="crmApp.businessPartner.status">Status</th>
@@ -126,8 +127,9 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="businessPartner in businessPartners">
-                <td><a ui-sref="businessPartnerDetails({id:businessPartner.id})">{{businessPartner.id}}</a></td>
+            <tr ng-repeat="businessPartner in businessPartners" >
+                <td><a ui-sref="businessPartnerDetails({id:businessPartner.id})" >{{businessPartner.id}}</a></td>
+                <td ng-click="transferId(businessPartner.id)">{{businessPartner.name}}</td>
                 <td>{{businessPartner.email}}</td>
                 <td>{{businessPartner.PIB}}</td>
                 <td>{{businessPartner.status}}</td>
@@ -157,6 +159,7 @@
     </div>
 
     <br/>
-        <a ui-sref="contacts">Contacts</a>
+        <!-- <a ui-sref="contacts({id:businessPartner.id})">Contacts</a> -->
+    <a ui-sref="businessPartnerContactDetailsPerPartner">Contacts</a>
         <div ui-view="contactDetails" ></div>
 </div>

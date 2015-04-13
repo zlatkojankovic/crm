@@ -22,6 +22,7 @@ angular.module('crmApp')
                     }]
                 }
             })
+        ///
             .state('businessPartnerContactDetailsDetail', {
                 parent: 'entity',
                 url: '/businessPartnerContactDetails/:id',
@@ -40,5 +41,6 @@ angular.module('crmApp')
                         return $translate.refresh();
                     }]
                 }
-            });
+            })
+            ;
     });

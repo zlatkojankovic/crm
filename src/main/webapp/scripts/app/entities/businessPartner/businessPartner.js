@@ -42,7 +42,7 @@ angular.module('crmApp')
             })
             .state('contacts', {
                 parent: 'businessPartner',
-
+                url:'/businessPartnersContactDetailss',
                 data: {
                     roles: ['ROLE_USER']
                 },
@@ -58,5 +58,24 @@ angular.module('crmApp')
                         return $translate.refresh();
                     }]
                 }
-            });
+            })
+            .state('businessPartnerContactDetailsPerPartner', {
+                parent: 'businessPartner',
+                url: '/businessPartnersContactDetailssPerPartner',
+                data: {
+                    roles: ['ROLE_USER']
+                },
+                views: {
+                    'contactDetails': {
+                        templateUrl: 'scripts/app/entities/businessPartnerContactDetails/businessPartnerContactDetails.html',
+                        controller: 'BusinessPartnerContactDetailsDetailController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('businessPartner');
+                        return $translate.refresh();
+                    }]
+                }
+            })
     });

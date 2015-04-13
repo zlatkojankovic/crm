@@ -1529,7 +1529,7 @@ th {
 }
 
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-	background-color: #f5f5f5
+	background-color: #96c8f5
 }
 
 table col[class*=col-] {
@@ -3549,7 +3549,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 
 [data-toggle=buttons]>.btn>input[type=radio], [data-toggle=buttons]>.btn>input[type=checkbox]
 	{
-	display: none
+	display: none;
 }
 
 .input-group {

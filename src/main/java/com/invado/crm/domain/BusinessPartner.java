@@ -13,6 +13,7 @@ import java.util.Set;
  * A BusinessPartner.
  */
 @Entity
+@Table(name="CB_BUSINESSPARTNER")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class BusinessPartner extends CodeBase implements Serializable {
 
