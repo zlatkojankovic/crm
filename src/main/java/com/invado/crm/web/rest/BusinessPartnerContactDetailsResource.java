@@ -69,7 +69,7 @@ public class BusinessPartnerContactDetailsResource {
     /**
      * GET  /businessPartnersContactDetailssPerPartner/:partnerId -> get the "partnerId" businessPartnerContactDetails.
      */
-    @RequestMapping(value = "/businessPartnersContactDetailssPerPartner",
+    @RequestMapping(value = "/businessPartnersContactDetailssPerPartner{partnerId}",
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed

@@ -14,12 +14,10 @@ angular.module('crmApp')
                         templateUrl: 'scripts/app/entities/businessPartner/businessPartners.html',
                         controller: 'BusinessPartnerController'
                     },
-                    'contactDetailsInsert@businessPartner':{
+                    'contactDetailsInsert@businessPartner': {
                         templateUrl: 'scripts/app/entities/businessPartnerContactDetails/businessPartnerContactDetailsModal.html'
-
                     }
                 }
-
             })
             .state('businessPartnerDetail', {
                 parent: 'entity',
@@ -42,7 +40,7 @@ angular.module('crmApp')
             })
             .state('contacts', {
                 parent: 'businessPartner',
-                url:'/businessPartnersContactDetailss',
+                url: '/businessPartnersContactDetailss',
                 data: {
                     roles: ['ROLE_USER']
                 },
@@ -61,7 +59,7 @@ angular.module('crmApp')
             })
             .state('businessPartnerContactDetailsPerPartner', {
                 parent: 'businessPartner',
-                url: '/businessPartnersContactDetailssPerPartner',
+                url: '/businessPartnersContactDetailssPerPartner/{partnerId}',
                 data: {
                     roles: ['ROLE_USER']
                 },
